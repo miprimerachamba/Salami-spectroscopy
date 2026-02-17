@@ -127,8 +127,8 @@ def showHistograms(multiIm, pixId, *args):
         for i in range(0, pixId.shape[0]):
             h[multiIm[pixId[i, 0], pixId[i, 1], band] + 1] = h[multiIm[pixId[i, 1], pixId[i, 2], band] + 1] + 1
 
-    print(np.shape(h))
-    print(h)
+    # print(np.shape(h))
+    # print(h)
     if showOn:
         hId = np.where(np.sum(h, 1) > 0)
         fId = np.maximum(np.min(hId) - 3, 1)
